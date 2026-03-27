@@ -1,11 +1,4 @@
 fastapi
 uvicorn
-torch
-torchvision
-timm
 pillow
-numpy
 python-multipart
-opencv-python-headless
-matplotlib
-transformers

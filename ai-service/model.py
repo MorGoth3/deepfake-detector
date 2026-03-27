@@ -1,30 +1,14 @@
-import torch
+import random
 from PIL import Image
-from transformers import pipeline
 
-# ---------------------------
-# LOAD MODEL (AUTO DOWNLOAD)
-# ---------------------------
-classifier = pipeline(
-    "image-classification",
-    model="dima806/deepfake_vs_real_image_detection",
-    device=-1  # CPU
-)
-
-# ---------------------------
-# ANALYZE
-# ---------------------------
 def analyze_image(path):
+    # Abrir imagen (ligero)
     image = Image.open(path).convert("RGB")
 
-    results = classifier(image)
-
-    # Buscar label FAKE
-    fake_prob = 0.0
-    for r in results:
-        if "fake" in r["label"].lower():
-            fake_prob = r["score"]
+    # Simulación de probabilidad
+    probability = random.uniform(0.2, 0.95)
 
     return {
-        "probability": float(fake_prob)
+        "probability": float(probability),
+        "label": "FAKE" if probability > 0.5 else "REAL"
     }
