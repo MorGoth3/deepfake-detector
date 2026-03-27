@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import API_URL from "../config/api";
 
 const Upload = ({ setResult }) => {
   const [file, setFile] = useState(null);
@@ -39,10 +40,7 @@ const Upload = ({ setResult }) => {
       const formData = new FormData();
       formData.append("file", file);
 
-      const response = await axios.post(
-        "http://localhost:3000/api/analyze",
-        formData,
-      );
+      const response = await axios.post(`${API_URL}/api/analyze`, formData);
 
       // MVP: simulación (luego reemplazas con respuesta real del modelo)
       setResult({

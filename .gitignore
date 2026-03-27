@@ -16,3 +16,9 @@ ai-service/uploads/*
 
 # OS
 .DS_Store
+
+# Env (NO subir secretos)
+.env
+*.env
+backend/.env
+frontend/.env
