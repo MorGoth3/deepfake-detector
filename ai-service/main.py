@@ -1,23 +1,39 @@
-from fastapi import FastAPI, UploadFile, File
-import shutil
-import os
-from model import analyze_image
+from PIL import Image
+from transformers import pipeline
 
-app = FastAPI()
+# ---------------------------
+# GLOBAL (lazy loading)
+# ---------------------------
+classifier = None
 
-UPLOAD_FOLDER = "uploads"
+def get_model():
+    global classifier
+    if classifier is None:
+        classifier = pipeline(
+            "image-classification",
+            model="google/vit-base-patch16-224",  modelo ligero
+            device=-1  # CPU
+        )
+    return classifier
 
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-@app.post("/analyze")
-async def analyze(file: UploadFile = File(...)):
-    file_path = os.path.join(UPLOAD_FOLDER, file.filename)
+# ---------------------------
+# ANALYZE
+# ---------------------------
+def analyze_image(path):
+    model = get_model()
 
-    # Guardar archivo
-    with open(file_path, "wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
+    image = Image.open(path).convert("RGB")
 
-    # Analizar imagen
-    result = analyze_image(file_path)
+    results = model(image)
 
-    return result   
+    # ⚠️ Este modelo NO es de deepfake
+    # Simulamos probabilidad basada en confianza máxima
+    top_result = max(results, key=lambda x: x["score"])
+
+    probability = float(top_result["score"])
+
+    return {
+        "label": top_result["label"],
+        "probability": probability
+    }
