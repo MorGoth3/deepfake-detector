@@ -1,0 +1,64 @@
+.sidebar {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  height: auto;
+  width: 50px;
+  background: #001331;
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+  gap: 25px;
+  border: 3px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  z-index: 100;
+}
+
+.nav-item {
+  position: relative;
+  color: #94a3b8;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+/* Hover efecto */
+.nav-item:hover {
+  background: #38bdf8;
+  color: #020617;
+  transform: scale(1.15);
+  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4);
+}
+
+/* Tooltip (texto al pasar el mouse) */
+.nav-item span {
+  position: absolute;
+  left: 70px;
+
+  background: #020617;
+  color: #e2e8f0;
+
+  padding: 6px 10px;
+  border-radius: 6px;
+
+  opacity: 0;
+  transform: translateX(-10px);
+  white-space: nowrap;
+
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.nav-item:hover span {
+  opacity: 1;
+  transform: translateX(0);
+}

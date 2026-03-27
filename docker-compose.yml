@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend/src/uploads:/app/uploads
+    depends_on:
+      - ai-service
+    environment:
+      - AI_URL=http://ai-service:8000
+
+  ai-service:
+    build: ./ai-service
+    ports:
+      - "8000:8000"
