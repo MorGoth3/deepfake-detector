@@ -7,7 +7,7 @@ COPY models/best_efficientnet_b0.pth models/
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-RUN pip install transformers
+
 
 COPY . .
 

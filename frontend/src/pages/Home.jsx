@@ -17,16 +17,14 @@ const Home = () => {
         <h3>¿Cómo quieres iniciar?</h3>
 
         <div className="home-buttons">
-          <Link to="/about" className="home-btn">
+          <Link to="/about/intro" className="home-btn">
             Aprender más
           </Link>
-
-          <Link to="/detector" className="home-btn">
-            Ir al Detector
-          </Link>
-
           <Link to="/quiz" className="home-btn">
             Probar conocimientos
+          </Link>
+          <Link to="/detector" className="home-btn">
+            Ir al Detector
           </Link>
         </div>
       </div>
