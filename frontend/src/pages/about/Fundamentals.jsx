@@ -16,6 +16,11 @@ const Fundamentals = () => {
         <h2 className="about-title">Fundamentos técnicos</h2>
 
         <p>La generación de deepfakes se sustenta principalmente en:</p>
+        <ul>
+          <li>Redes neuronales profundas.</li>
+          <li>Modelos generativos.</li>
+          <li>Procesamiento de datos.</li>
+        </ul>
         <h3 className="about-subtitle">Redes neuronales profundas</h3>
         <p>
           Las redes neuronales profundas son sistemas de inteligencia artificial
@@ -29,9 +34,9 @@ const Fundamentals = () => {
         <p>Cuando una red analiza un rostro:</p>
 
         <ul>
-          <li>La primera capa detecta bordes</li>
-          <li>La siguiente identifica ojos y nariz</li>
-          <li>Las últimas reconocen el rostro completo</li>
+          <li>La primera capa detecta bordes.</li>
+          <li>La siguiente identifica ojos y nariz.</li>
+          <li>Las últimas reconocen el rostro completo.</li>
         </ul>
 
         <button onClick={() => setShowSimulation(true)}>Simular proceso</button>

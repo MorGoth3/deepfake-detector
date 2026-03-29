@@ -5,7 +5,7 @@ const models = {
   gans: {
     title: "GANs (Generative Adversarial Networks)",
     description:
-      "Dos redes compiten: una genera imágenes falsas y otra intenta detectarlas.",
+      "Las GANs consisten en dos redes neuronales en competencia: un generador que produce contenido sintético y un discriminador que intenta distinguir entre datos reales y falsos. Este proceso adversarial mejora progresivamente la calidad de las muestras generadas. ",
     steps: [
       "Ruido aleatorio",
       "Generador crea imagen",
@@ -18,7 +18,7 @@ const models = {
   autoencoder: {
     title: "Autoencoders",
     description:
-      "Codifican una imagen en un espacio latente y luego la reconstruyen.",
+      "Son modelos de aprendizaje no supervisado que comprenden dos componentes: un codificador que transforma los datos en una representación latente y un decodificador que reconstruye la información original.",
     steps: [
       "Imagen original",
       "Codificación",
@@ -31,7 +31,7 @@ const models = {
   diffusion: {
     title: "Modelos de Difusión",
     description:
-      "Parten de ruido y lo refinan paso a paso hasta generar una imagen.",
+      "Estos modelos generan datos a partir de ruido aleatorio y lo refinan paso a paso hasta generar una imagen.",
     steps: [
       "Ruido puro",
       "Eliminación de ruido",
@@ -50,7 +50,7 @@ const GenerativeModelModal = ({ type, onClose }) => {
     if (step < model.steps.length - 1) {
       const timer = setTimeout(() => {
         setStep((prev) => prev + 1);
-      }, 1200);
+      }, 4200);
       return () => clearTimeout(timer);
     }
   }, [step]);
@@ -79,7 +79,7 @@ const GenerativeModelModal = ({ type, onClose }) => {
                     animate={{
                       x: index <= step ? [0, 40, 80] : 0,
                     }}
-                    transition={{ repeat: Infinity, duration: 1 }}
+                    transition={{ repeat: Infinity, duration: 2 }}
                   />
                 </motion.div>
               )}

@@ -18,7 +18,7 @@ const Detection = () => {
           Se centra en detectar artefactos generados durante la síntesis, tales
           como inconsistencias en iluminación, texturas o bordes faciales. Estos
           métodos explotan imperfecciones introducidas por los modelos
-          generativos
+          generativos.
         </p>
 
         <h3 className="about-subtitle">Análisis biométrico</h3>
@@ -35,6 +35,43 @@ const Detection = () => {
           desincronizaciones o discrepancias entre voz y movimiento labial, lo
           cual es común en deepfakes mal generados.
         </p>
+
+        <h2>Limitaciones</h2>
+        <p>
+          A pesar de los avances, los sistemas de detección presentan
+          limitaciones significativas:
+        </p>
+        <ul>
+          <li>
+            Baja capacidad de generalización: los modelos suelen fallar al
+            enfrentarse a datos fuera de su conjunto de entrenamiento.
+          </li>
+          <li>
+            Rápida obsolescencia: los avances en generación superan
+            constantemente a los métodos de detección.
+          </li>
+          <li>
+            Dependencia de datasets: los sesgos en los datos afectan el
+            rendimiento del modelo.
+          </li>
+        </ul>
+        <h2>Nuevas estrategias</h2>
+        <p>Ante estas limitaciones, han surgido nuevas estrategias:</p>
+        <ul>
+          <li>
+            Análisis físico: estudio de propiedades inherentes a la captura de
+            imágenes (iluminación, óptica).
+          </li>
+          <li>
+            Blockchain: verificación de autenticidad mediante registro inmutable
+            de contenido.
+          </li>
+          <li>
+            Marcas de agua digitales: inserción de señales invisibles para
+            identificar contenido generado.
+          </li>
+        </ul>
+
         <button onClick={() => alert("¿Fake o real?")}>Probar detección</button>
 
         <div className="nav-buttons">

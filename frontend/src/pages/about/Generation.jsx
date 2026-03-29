@@ -19,12 +19,12 @@ const Generation = () => {
 
         <p>El proceso sigue estos pasos:</p>
 
-        <h3 className="about-subtitle">1. Recolección de datos:</h3>
+        <h3 className="about-subtitle">1. Recolección de datos</h3>
         <p>
           Se obtienen imágenes o videos de una persona. Mientras más datos haya,
           mejor será el resultado.
         </p>
-        <h3 className="about-subtitle">2. Entrenamiento del modelo:</h3>
+        <h3 className="about-subtitle">2. Entrenamiento del modelo</h3>
         <p>El modelo analiza los datos y aprende patrones como:</p>
 
         <ul>
@@ -32,9 +32,9 @@ const Generation = () => {
           <li>Expresiones</li>
           <li>Movimientos</li>
         </ul>
-        <h3 className="about-subtitle">3. Generación:</h3>
+        <h3 className="about-subtitle">3. Generación</h3>
         <p>El modelo usa lo aprendido para crear nuevas imágenes o videos.</p>
-        <h3 className="about-subtitle">4. Postprocesamiento:</h3>
+        <h3 className="about-subtitle">4. Postprocesamiento</h3>
         <p>
           Se ajustan detalles como iluminación y textura para hacer el resultado
           más realista.
