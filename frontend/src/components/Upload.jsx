@@ -59,14 +59,14 @@ const Upload = ({ setResult }) => {
   return (
     <div>
       {/* Input */}
-      <input type="file" onChange={handleFileChange} className="border p-2" />
+      <input type="file" onChange={handleFileChange} />
 
       {/* Error */}
       {error && <p>{error}</p>}
 
       {/* Preview */}
       {preview && (
-        <div className="preview-container">
+        <div>
           {file.type.startsWith("image/") ? (
             <img src={preview} alt="preview" />
           ) : (
@@ -76,15 +76,11 @@ const Upload = ({ setResult }) => {
       )}
 
       {/* Botón */}
-      <button
-        onClick={handleUpload}
-        disabled={loading}
-        className={`px-4 py-2 text-white rounded ${
-          loading ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-600"
-        }`}
-      >
-        {loading ? "Analizando..." : "Analizar"}
-      </button>
+      <div className="simulate-btn">
+        <button onClick={handleUpload} disabled={loading}>
+          {loading ? "Analizando..." : "Analizar"}
+        </button>
+      </div>
     </div>
   );
 };
