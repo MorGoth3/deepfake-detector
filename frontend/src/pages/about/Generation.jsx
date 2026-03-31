@@ -39,15 +39,18 @@ const Generation = () => {
           Se ajustan detalles como iluminación y textura para hacer el resultado
           más realista.
         </p>
-
-        <button onClick={() => setShowSimulation(true)}>Simular proceso</button>
+        <div className="simulate-btn">
+          <button onClick={() => setShowSimulation(true)}>
+            Simular proceso
+          </button>
+        </div>
 
         <div className="nav-buttons">
           <button onClick={() => navigate("/about/fundamentals")}>
-            ← Explora fundamentos
+            ← Explorar fundamentos
           </button>
           <button onClick={() => navigate("/about/detection")}>
-            Explora detección →
+            Explorar detección →
           </button>
         </div>
       </div>

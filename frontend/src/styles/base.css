@@ -24,12 +24,12 @@ body {
 
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* 🔥 clave */
+  min-height: 100vh; /* clave */
 }
 
 /* Contenido principal (respeta navbar lateral) */
 .main-content {
-  flex: 1; /* 🔥 empuja el footer abajo */
+  flex: 1; /*empuja el footer abajo */
   padding: 2rem;
 }
 
@@ -68,6 +68,12 @@ h3 {
 
 h1 {
   color: #2a9689;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 /* ========================= */

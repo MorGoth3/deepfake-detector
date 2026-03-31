@@ -1,0 +1,50 @@
+.quiz-container {
+  padding: 40px;
+  text-align: center;
+}
+
+.quiz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.quiz-card {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.quiz-card:hover {
+  transform: scale(1.05);
+}
+
+.quiz-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.correct {
+  background-color: #4caf50;
+  color: white;
+}
+
+.incorrect {
+  background-color: #f44336;
+  color: white;
+}
+
+.item-question {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}

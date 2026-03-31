@@ -39,7 +39,11 @@ const Fundamentals = () => {
           <li>Las últimas reconocen el rostro completo.</li>
         </ul>
 
-        <button onClick={() => setShowSimulation(true)}>Simular proceso</button>
+        <div className="simulate-btn">
+          <button onClick={() => setShowSimulation(true)}>
+            Simular proceso
+          </button>
+        </div>
 
         <p>
           Gracias a este proceso, la red puede entender patrones complejos en
@@ -109,10 +113,10 @@ const Fundamentals = () => {
 
         <div className="nav-buttons">
           <button onClick={() => navigate("/about/intro")}>
-            ← Explorar Inicio
+            ← Explorar inicio
           </button>
           <button onClick={() => navigate("/about/generation")}>
-            Explorar Generacion →
+            Explorar generación →
           </button>
         </div>
       </div>

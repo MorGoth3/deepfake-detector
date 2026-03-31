@@ -78,6 +78,10 @@ const DeepfakeProcessModal = ({ onClose }) => {
       <div className="nn-modal-content">
         <h2>Simulación: Creación de Deepfake</h2>
 
+        <div className="nn-description-generation">
+          <p>{steps[step].description}</p>
+        </div>
+
         <div className="nn-container">
           {steps.map((s, index) => (
             <div key={index} className="nn-layer-wrapper">
@@ -110,11 +114,6 @@ const DeepfakeProcessModal = ({ onClose }) => {
               </motion.div>
             </div>
           ))}
-        </div>
-        <div>
-          <p style={{ textAlign: "center", opacity: 0.8 }}>
-            {steps[step].description}
-          </p>
         </div>
 
         <div className="nn-controls">

@@ -27,6 +27,17 @@
   margin: 40px 0;
 }
 
+.nn-description,
+.nn-description-generation {
+  padding: 20px;
+  text-align: justify;
+  opacity: 0.8;
+}
+
+.nn-description-generation {
+  text-align: center;
+}
+
 .nn-layer-wrapper {
   display: flex;
   align-items: center;
@@ -134,12 +145,19 @@
 
 .nn-controls button {
   padding: 10px 18px;
-  background: #00ffcc;
-  border: none;
+  background: #1e293b;
+  border: 1px solid #2d9966;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.3s ease;
+  color: #e2e8f0;
 }
+
+.nn-controls button:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
 /* stack de imágenes */
 .df-stack img {
   width: 40px;

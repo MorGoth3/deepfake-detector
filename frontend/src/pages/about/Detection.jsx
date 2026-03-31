@@ -71,14 +71,19 @@ const Detection = () => {
             identificar contenido generado.
           </li>
         </ul>
-
-        <button onClick={() => alert("¿Fake o real?")}>Probar detección</button>
+        <div className="simulate-btn">
+          <button onClick={() => alert("¿Fake o real?")}>
+            Probar detección
+          </button>
+        </div>
 
         <div className="nav-buttons">
           <button onClick={() => navigate("/about/generation")}>
-            ← Anterior
+            ← Explorar generación
           </button>
-          <button onClick={() => navigate("/about/impact")}>Siguiente →</button>
+          <button onClick={() => navigate("/about/impact")}>
+            Explorar impacto →
+          </button>
         </div>
       </div>
     </div>

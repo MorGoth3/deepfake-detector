@@ -108,6 +108,10 @@
   color: #d8ffdb;
 }
 
+.modal-content p {
+  text-align: justify;
+}
+
 /* ================= */
 /* IMPACTO (SECCIÓN 5) */
 /* ================= */
@@ -130,7 +134,7 @@
 
   background-size: cover;
   background-position: center;
-
+  text-align: justify;
   cursor: pointer;
   overflow: hidden;
 
@@ -249,8 +253,26 @@
 
 .nav-buttons {
   margin-top: 20px;
+  background: #1e293b;
   display: flex;
   justify-content: space-between;
+}
+
+.nav-buttons button {
+  padding: 12px 20px;
+  background: #1e293b;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  color: #e2e8f0;
+  border: 1px solid #2d9966;
+}
+
+/* Hover efecto */
+.nav-buttons button:hover {
+  transform: translateY(-3px) scale(1.05);
 }
 
 .tech-card.active {
@@ -262,4 +284,31 @@
   justify-content: space-around;
   margin: 20px 0;
   font-size: 1.2rem;
+}
+
+.simulate-btn {
+  margin-top: 20px;
+  background: #1e293b;
+  display: flex;
+  justify-content: space-between;
+}
+
+.simulate-btn button {
+  padding: 12px 20px;
+  margin: 30px 0px;
+  background: #fac73b;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  color: #1e293b;
+  border: 1px solid #fac73b;
+}
+
+/* Hover efecto */
+.simulate-btn button:hover {
+  background: #1e293b;
+  color: #e2e8f0;
+  transform: translateY(-3px) scale(1.05);
 }

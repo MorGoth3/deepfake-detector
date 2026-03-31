@@ -82,7 +82,9 @@ const Impact = () => {
           <button onClick={() => navigate("/about/detection")}>
             ← Explorar detección
           </button>
-          <button onClick={() => navigate("/quiz")}>Ir al Quiz →</button>
+          <button onClick={() => navigate("/quiz")}>
+            Probar conocimientos →
+          </button>
         </div>
       </div>
       {modal && (

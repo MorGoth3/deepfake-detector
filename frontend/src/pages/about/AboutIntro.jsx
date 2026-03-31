@@ -47,9 +47,11 @@ const AboutIntro = () => {
           comunicación científica, representan una transformación en la manera
           en que se interpreta la evidencia audiovisual.
         </p>
-        <button onClick={() => navigate("/about/fundamentals")}>
-          Explorar fundamentos →
-        </button>
+        <div className="nav-buttons">
+          <button onClick={() => navigate("/about/fundamentals")}>
+            Explorar fundamentos →
+          </button>
+        </div>
       </div>
 
       <img src={img1} alt="deepfake" className="about-image" />

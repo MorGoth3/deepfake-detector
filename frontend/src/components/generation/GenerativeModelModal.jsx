@@ -61,7 +61,9 @@ const GenerativeModelModal = ({ type, onClose }) => {
     <div className="nn-modal-overlay">
       <div className="nn-modal-content">
         <h2>{model.title}</h2>
-        <p style={{ opacity: 0.8 }}>{model.description}</p>
+        <div className="nn-description">
+          <p>{model.description}</p>
+        </div>
 
         <div className="nn-container">
           {model.steps.map((s, index) => (
