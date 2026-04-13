@@ -74,8 +74,8 @@ const DeepfakeProcessModal = ({ onClose }) => {
   };
 
   return (
-    <div className="nn-modal-overlay">
-      <div className="nn-modal-content">
+    <div className="modal-overlay">
+      <div className="modal-content">
         <h2>Simulación: Creación de Deepfake</h2>
 
         <div className="nn-description-generation">

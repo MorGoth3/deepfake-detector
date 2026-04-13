@@ -58,15 +58,12 @@ const Upload = ({ setResult }) => {
 
   return (
     <div>
-      {/* Input */}
       <input type="file" onChange={handleFileChange} />
 
-      {/* Error */}
       {error && <p>{error}</p>}
 
-      {/* Preview */}
       {preview && (
-        <div>
+        <div className="preview-container">
           {file.type.startsWith("image/") ? (
             <img src={preview} alt="preview" />
           ) : (
@@ -75,7 +72,6 @@ const Upload = ({ setResult }) => {
         </div>
       )}
 
-      {/* Botón */}
       <div className="simulate-btn">
         <button onClick={handleUpload} disabled={loading}>
           {loading ? "Analizando..." : "Analizar"}

@@ -1,25 +1,3 @@
-.nn-modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.nn-modal-content {
-  background: #0f172a;
-  padding: 30px;
-  border-radius: 16px;
-  width: 90%;
-  max-width: 1000px;
-  color: white;
-}
-
 .nn-container {
   display: flex;
   align-items: center;
@@ -27,8 +5,7 @@
   margin: 40px 0;
 }
 
-.nn-description,
-.nn-description-generation {
+.nn-description {
   padding: 20px;
   text-align: justify;
   opacity: 0.8;

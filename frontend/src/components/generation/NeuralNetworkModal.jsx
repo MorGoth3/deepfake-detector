@@ -77,8 +77,8 @@ const NeuralNetworkModal = ({ onClose }) => {
   };
 
   return (
-    <div className="nn-modal-overlay">
-      <div className="nn-modal-content">
+    <div className="modal-overlay">
+      <div className="modal-content">
         <h2>Simulación de Red Neuronal</h2>
 
         <div className="nn-container">

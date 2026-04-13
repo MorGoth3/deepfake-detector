@@ -17,7 +17,7 @@ const AboutLayout = () => {
   return (
     <div className="page-wrapper">
       <div className="page-container">
-        {/* 🔹 PROGRESS BAR GLOBAL */}
+        {/* Mostrar barra de proceso */}
         <div className="progress-bar">
           <div className="progress" style={{ width: `${progress}%` }} />
         </div>

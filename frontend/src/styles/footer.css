@@ -3,15 +3,11 @@
   margin: 0;
   margin-top: 100px;
   padding: 20px 40px;
-
-  background: #1e293b;
-
+  background: var(--section-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-
-  /* asegura que no haya espacios raros */
   box-sizing: border-box;
 }
 
@@ -24,7 +20,7 @@
 }
 
 /* ================= */
-/* SECCIÓN 1 (logo institución) */
+/* SECCIÓN 1- logo institución */
 /* ================= */
 
 .footer-logo {
@@ -33,7 +29,7 @@
 }
 
 /* ================= */
-/* SECCIÓN 2 (logo + texto) */
+/* SECCIÓN 2 - logo división + texto */
 /* ================= */
 
 .footer-center {
@@ -43,7 +39,7 @@
 }
 
 .footer-center img {
-  height: 80px; /* 🔥 ocupa el alto del texto */
+  height: 80px;
   object-fit: contain;
 }
 
@@ -59,7 +55,7 @@
 
 .footer-text span:last-child {
   font-size: 0.9rem;
-  color: #94a3b8;
+  color: var(--item-color);
 }
 
 /* ================= */
@@ -69,5 +65,5 @@
 .footer-right {
   text-align: center;
   font-size: 0.9rem;
-  color: #94a3b8;
+  color: var(--item-color);
 }

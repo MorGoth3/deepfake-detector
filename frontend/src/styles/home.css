@@ -1,41 +1,4 @@
-/* Contenedor de botones */
-.home-buttons {
-  margin-top: 30px;
-  display: flex;
-  gap: 20px; /* espacio entre botones */
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* Botones */
-.home-btn {
-  padding: 12px 20px;
-  background: #1e293b;
-  color: #e2e8f0;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-  border: 1px solid transparent;
-}
-
-/* Hover efecto */
-.home-btn:hover {
-  border: 1px solid #2d9966;
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 10px 20px rgba(24, 120, 111, 0.4);
-}
-
-/* Variante botón principal */
-.home-btn.primary {
-  background: #38bdf8;
-  color: #020617;
-}
-
-.home-btn.primary:hover {
-  background: #0ea5e9;
-}
-
+/* Contenedor de imagen-logo */
 .home-image {
   max-width: 500px;
   height: 300px;
@@ -43,4 +6,32 @@
   border-radius: 12px;
   margin-top: 20px;
   object-fit: contain;
+}
+
+/* Contenedor de botones */
+.home-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Botones */
+.home-btn {
+  padding: 12px 20px;
+  background: var(--section-color);
+  color: var(--text-color);
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+/* Hover efecto botones */
+.home-btn:hover {
+  border: 1px solid var(--primary-color);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(24, 120, 111, 0.4);
 }

@@ -58,8 +58,8 @@ const GenerativeModelModal = ({ type, onClose }) => {
   const reset = () => setStep(0);
 
   return (
-    <div className="nn-modal-overlay">
-      <div className="nn-modal-content">
+    <div className="modal-overlay">
+      <div className="modal-content">
         <h2>{model.title}</h2>
         <div className="nn-description">
           <p>{model.description}</p>
